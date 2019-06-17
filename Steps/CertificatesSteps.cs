@@ -6,15 +6,15 @@ using System.Threading;
 using TechTalk.SpecFlow;
 using static SpecflowPages.CommonMethods;
 
-namespace SpecflowTests.AcceptanceTest
+namespace SpecflowTests.AcceptanceTest.Steps
 {
     [Binding]
-    public class AddCertificationSteps
+    public class CertificatesSteps
     {
         [Given(@"I am logged in and on the profiel pag")]
         public void GivenIAmLoggedInAndOnTheProfielPag()
         {
-            //Wait
+            // Wait
             Thread.Sleep(1500);
 
             // Click on Profile tab
@@ -26,14 +26,13 @@ namespace SpecflowTests.AcceptanceTest
         {
             Driver.driver.FindElement(By.XPath("//a[text()='Certifications']")).Click();
         }
-        
         [Then(@"I click on the add new tab")]
         public void ThenIClickOnTheAddNewTab()
         {
             //Click on add new tab
             Driver.driver.FindElement(By.CssSelector("#account-profile-section > div > section:nth-child(3) > div > div > div > div.eight.wide.column > form > div.ui.bottom.attached.tab.segment.tooltip-target.active > div.row > div.twelve.wide.column.scrollTable > div > table > thead > tr > th.right.aligned > div")).Click();
         }
-        
+
         [Then(@"I add all the details of certification")]
         public void ThenIAddAllTheDetailsOfCertification()
         {
@@ -49,14 +48,14 @@ namespace SpecflowTests.AcceptanceTest
             //Choose the Year
             Driver.driver.FindElement(By.XPath("//option[@value='2018']"));
         }
-        
+
         [Then(@"I click on add button to add the certification")]
         public void ThenIClickOnAddButtonToAddTheCertification()
         {
             //Click on Add button
             Driver.driver.FindElement(By.XPath("//input[@value='Add']")).Click();
         }
-        
+
         [Then(@"Certification should be added")]
         public void ThenCertificationShouldBeAdded()
         {
@@ -88,3 +87,4 @@ namespace SpecflowTests.AcceptanceTest
         }
     }
 }
+

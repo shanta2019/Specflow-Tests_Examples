@@ -65,7 +65,7 @@ namespace SpecflowTests.AcceptanceTest
                 CommonMethods.ExtentReports();
                 Thread.Sleep(1000);
                 CommonMethods.test = CommonMethods.extent.StartTest("Add a Skill");
-
+                                
                 Thread.Sleep(1000);
                 string ExpectedValue = "Selenium";
                 string ActualValue = Driver.driver.FindElement(By.XPath("//table[@class='ui fixed table']//td[text()='Selenium']")).Text;

@@ -1,4 +1,4 @@
-﻿Feature: AddCertification
+﻿Feature: Certificates
 	In orderto update profile
 	I have to add certifications
 
